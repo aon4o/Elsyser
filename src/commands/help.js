@@ -36,6 +36,19 @@ module.exports = new Command({
                         value: 'This command deletes a specific number of messages.\n' +
                             '*Max number of deletions at once -> 20*',
                         inline: false
+                    },{
+                        name: '**`!set_week <type:string>`**',
+                        value: 'This command sets the current week\'s type.\n' +
+                            '*Values -> "odd" or "even"*',
+                        inline: false
+                    },{
+                        name: '**`!add_class <day> <number> <start_hour>, <start_min>, <end_hour>, <end_min> <class_name>`**',
+                        value: 'Adds a class to the schedule.\n' +
+                            '*<day> --> A day from monday to friday or their short forms.\n' +
+                            '<number> --> The number of the class. (1 to 10)\n' +
+                            '<start_hour>, <start_min>, <end_hour>, <end_min> --> Valid start/end hour/mins number.\n' +
+                            '<class_name> --> The name of the class. (3 to 100 chars)*',
+                        inline: false
                     },
                 )
         } else {
@@ -68,8 +81,8 @@ module.exports = new Command({
                         value: 'Shows you a message with the schedule for the day you\'ve chosen.\n' +
                             '**`<day>`** can be:\n' +
                             'a day from `monday` to `friday` or their short forms,\n' +
-                            '`today` for the current days schedule,\n' +
-                            'or *empty* for the full weeks schedule.',
+                            '`today` or *empty* for the current days schedule,\n' +
+                            'or `full` for the full week schedule.',
                         inline: false
                     },
                 )
