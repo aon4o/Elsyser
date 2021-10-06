@@ -6,11 +6,8 @@ module.exports = new Command({
     description: 'Shows the help menu',
     permission: 'SEND_MESSAGES',
     async run(message, args, client) {
-        console.log(message)
-        console.log(args)
 
         const embed = new Discord.MessageEmbed()
-
         embed
             .setAuthor(
                 client.user.username,
