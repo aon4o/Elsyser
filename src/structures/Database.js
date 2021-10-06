@@ -46,6 +46,17 @@ con.query("CREATE DATABASE IF NOT EXISTS elsyser", function (err, result) {
                 if (err) throw err;
                 console.log("Table 'schedule' created!");
             })
+
+        con.query(
+            "create table week (" +
+            "id int primary key auto_increment not null," +
+            "guild_id varchar(18) not null unique," +
+            "week_offset bool not null" +
+            ")",
+            function (err, result) {
+                if (err) throw err;
+                console.log("Table 'week' created!");
+            })
     }
 });
 
