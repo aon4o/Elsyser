@@ -57,6 +57,18 @@ con.query("CREATE DATABASE IF NOT EXISTS elsyser", function (err, result) {
                 if (err) throw err;
                 console.log("Table 'week' created!");
             })
+
+        con.query(
+            "create table class (" +
+            "id int primary key auto_increment not null," +
+            "guild_id varchar(18) not null," +
+            "name varchar(50) not null," +
+            "unique (guild_id, name)" +
+            ")",
+            function (err, result) {
+                if (err) throw err;
+                console.log("Table 'class' created!");
+            })
     }
 });
 

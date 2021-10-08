@@ -5,6 +5,7 @@ require('../additional_functions/getWeek')
 module.exports = new Command({
     name: "week",
     description: "Get week the type of the current week",
+    permission: "SEND_MESSAGES",
 
     async run(message, args, client) {
         let date = new Date()

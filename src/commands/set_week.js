@@ -4,7 +4,7 @@ const con = require("../structures/Database");
 module.exports = new Command({
     name: "set_week",
     description: "Set week for a schedule",
-    permission: "MANAGE_MESSAGES",
+    permission: "ADMINISTRATOR",
 
     async run(message, args, client) {
         let weekType = args[1]

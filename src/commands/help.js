@@ -89,12 +89,12 @@ module.exports = new Command({
 
         embed
             .addField(
-                'In the near future there will be more commands available.\n',
+                'In the near future, there will be more commands available.\n',
                 'If you have an idea about what functions should be added,\n' +
                 'feel free to contact the creators! ;)',
             )
 
-        message.reply({embeds: [embed]})
+        return message.reply({embeds: [embed]})
 
     }
 })
